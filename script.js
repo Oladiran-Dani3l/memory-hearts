@@ -1,6 +1,8 @@
 const cards = ["💖", "💖", "😍", "😍", "💌", "💌", "💕", "💕", "💘", "💘", "💓", "💓"];
 let flippedCards = [];
 let matchedCards = [];
+let numMoves = 0;
+const displayScore = document.getElementById("moves")
 
 
 function shuffle(array) {
@@ -24,6 +26,19 @@ function createBoard() {
     gameBoard.appendChild(cardElement);
   });
 }
+
+// NUMBER OF MOVES
+// after 2 cards have been flipped;
+//  - there should be an increment in number of moves
+//  - Number of moves should also be displayed
+function updateScore () {
+  numMoves++;
+  displayScore.textContent = numMoves;
+  console.log("no of moves = " + moves);
+}
+
+
+
 // flipcard logic
 // 1. listen for the event target and store it
 // 2. card shoud flip if it meets the following conditions:
@@ -44,6 +59,7 @@ function flipCard(event) {
     flippedCards.push(card);
     if (flippedCards.length === 2) {
       checkMatch();
+      updateScore();  //updateScore function called after two cards have been flipped 
     console.log("it is match");
         }
     }
@@ -87,6 +103,8 @@ function checkMatch (){
 }
 
 
+
+
 // 1. to reset game we are resetting is the game board
 // 2. get the #game-board element 
 // 3. empty the element
@@ -98,6 +116,10 @@ function resetGame(){
     gameBoard.innerHTML = "";
     flippedCards = [];
     matchedCards = [];
+    numMoves = 0;
+    displayScore.textContent = 0;
+
+
     createBoard();
 }
 

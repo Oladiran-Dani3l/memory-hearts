@@ -1,3 +1,6 @@
+## WEEK % TASK 5
+Added Moves Score Display to enhance the user enganement of the game.
+
 # **Match the Hearts - Valentine's Memory Game**
 
 Welcome to the **Match the Hearts** game! This is a fun, Valentine's-themed memory game where you flip cards to find matching pairs of love-themed messages. This project is designed to help you learn **HTML**, **CSS**, and **JavaScript** in a hands-on way.

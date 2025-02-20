@@ -8,6 +8,7 @@ body {
   }
   
   .container {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -65,4 +66,10 @@ body {
   
   .reset-button:hover {
     background-color: #b71c1c; 
+  }
+
+  .move-section {
+    position: absolute;
+    left: -18%;
+    bottom: 30%;
   }
